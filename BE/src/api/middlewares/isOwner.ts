@@ -1,6 +1,6 @@
 import express from "express";
 import { ResCode } from "../enums";
-import { get, merge } from "lodash"
+import { get, merge } from "lodash";
 
 export const isOwner = async (
   req: express.Request,
@@ -13,9 +13,7 @@ export const isOwner = async (
 
     if (!id) {
       console.log("Resource ID not provided");
-      res
-        .status(ResCode.BAD_REQUEST)
-        .json({ message: "Bad Request: Resource ID not provided" });
+      res.status(ResCode.BAD_REQUEST).json({ message: "Bad Request: Resource ID not provided" });
       return;
     }
 
