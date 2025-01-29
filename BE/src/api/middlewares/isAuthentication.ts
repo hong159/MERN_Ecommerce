@@ -2,7 +2,7 @@
 import express from "express";
 import { ResCode } from "../enums";
 import { merge } from "lodash";
-import { userService } from "../modules/users/user.service";
+import { AuthService } from "../modules/auth/auth.service";
 export const isAuthenticated = async (
     req: express.Request,
     res: express.Response,
@@ -19,7 +19,7 @@ export const isAuthenticated = async (
             return;
         }
 
-        const existingUser = await userService.getUserBySessionToken(sessionToken);
+        const existingUser = await AuthService.getUserBySessionToken(sessionToken);
 
         if (!existingUser) {
             console.log("Invalid session token");

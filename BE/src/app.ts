@@ -6,7 +6,7 @@ import cookieParser from 'cookie-parser';
 import { connectDB } from "./config/db";
 import { env } from "./config/env";
 import router from "./api/modules";
-import { errorHandler } from "./api/middlewares/errorHandler";
+import { ErrorHandle } from "./api/middlewares/errorHandler";
 
 const app = express();
 
@@ -23,6 +23,6 @@ connectDB();
 app.use("/api", router);
 
 // Xử lý lỗi tập trung
-app.use(errorHandler);
+app.use(ErrorHandle);
 
 export default app;

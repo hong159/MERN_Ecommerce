@@ -2,7 +2,7 @@
 import express from "express";
 import { ResCode } from "../enums";
 
-export const errorHandler = (
+export const ErrorHandle = (
     err: Error,
     req: express.Request,
     res: express.Response,
