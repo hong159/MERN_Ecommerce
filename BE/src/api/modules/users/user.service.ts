@@ -1,4 +1,4 @@
-import { User } from "../../models";
+import { IUser, User } from "../../models";
 
 export const UserService = {
   getUsers: () => User.find(),
@@ -6,5 +6,5 @@ export const UserService = {
   createUser: (values: Record<string, object>) =>
     new User(values).save().then((user) => user.toObject()),
   deleteUserById: (id: string) => User.findByIdAndDelete({ _id: id }),
-  updateUser: (id: string, values: Record<string, number>) => User.findByIdAndUpdate(id, values),
+  updateUser: (id: string, values: Record<string, any>) => User.findByIdAndUpdate(id, values),
 };

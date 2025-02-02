@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import InputWithBorder from "@/components/input-components/input-with-border";
+import ButtonWithoutBorder from "@/components/button-components/button-without-border";
 
 
 const SignIn =()=> {
@@ -46,9 +48,9 @@ const SignIn =()=> {
 
                         <form action="#" className="mt-8 grid grid-cols-6 gap-6">
 
-                            <InputComponent type="text" label="Email" />
+                            <InputWithBorder type="text" label="Email" />
 
-                            <InputComponent type="password" label="Password" />
+                            <InputWithBorder type="password" label="Password" />
 
 
                             <div className="col-span-6">
@@ -61,17 +63,13 @@ const SignIn =()=> {
                                     />
 
                                     <span className="text-sm text-gray-700">
-                Remember Account.
-              </span>
+                                        Remember Account.
+                                      </span>
                                 </label>
                             </div>
-                            
+
                             <div className="col-span-6 sm:flex sm:items-center sm:gap-4">
-                                <button
-                                    className="inline-block shrink-0 rounded-md border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-blue-600 focus:ring-3 focus:outline-hidden"
-                                >
-                                    Sign In
-                                </button>
+                                <ButtonWithoutBorder content={'Sign In'}/>
 
                                 <p className="mt-4 text-sm text-gray-500 sm:mt-0">
                                     Are you do not have an account?
@@ -88,22 +86,5 @@ const SignIn =()=> {
 };
 
 
-const InputComponent=({type,label }:{type: string, label: string})=>{
-    const name = label.toLowerCase().replace(' ', '_');
-    const id = label.replace(' ', '_');
-    return(
-        <div className={`col-span-6 `}>
-            <label htmlFor={id} className="block text-sm font-medium text-gray-700">
-                {label}
-            </label>
-
-            <input
-                type={type}
-                id={id}
-                name={name}
-                className="mt-1 p-2 w-full  rounded-md border-2 border-gray-200 bg-white text-sm text-gray-700 shadow-xs"
-            />
-        </div>)
-}
 export default SignIn;
 

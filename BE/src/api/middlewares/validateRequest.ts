@@ -1,7 +1,7 @@
 // src/api/middlewares/validateRequest.ts
 import express from "express";
 import { AnyZodObject, ZodError } from "zod";
-import { ResCode } from "../enums";
+import { ResCode } from "../shared/enums";
 
 /**
  * Middleware validate request dựa trên schema Zod.

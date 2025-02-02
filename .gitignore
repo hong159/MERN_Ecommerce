@@ -1,3 +1,5 @@
 node_modules/
-BE/dist/
-BE/.idea/
+be/dist/
+be/.idea/
+fe/.idea/
+.idea/

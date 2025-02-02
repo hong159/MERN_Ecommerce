@@ -1,5 +1,5 @@
 import express from "express";
-import { ResCode } from "../enums";
+import { ResCode } from "../shared/enums";
 import { merge } from "lodash";
 import { AuthService } from "../modules/auth/auth.service";
 export const isAuthenticated = async (

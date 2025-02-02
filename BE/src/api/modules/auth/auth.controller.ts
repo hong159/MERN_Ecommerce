@@ -1,4 +1,4 @@
-import { ResCode } from "../../enums";
+import { ResCode } from "../../shared/enums";
 import { AuthHepler } from "../../helpers";
 import express from "express";
 import { AuthService } from "./auth.service";

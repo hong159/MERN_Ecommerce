@@ -1,6 +1,6 @@
 // src/api/modules/user/user.controller.ts
 import express from "express";
-import { ResCode } from "../../enums";
+import { ResCode } from "../../shared/enums";
 import { UserService } from "./user.service";
 import { get } from "lodash";
 
@@ -36,7 +36,7 @@ export const UserController = {
       const user = await UserService.getUserById(id);
 
       user!.username = username;
-      await user!.save();
+      await UserService.updateUser(id, user!);
 
       res.sendStatus(ResCode.OK).end();
       return;

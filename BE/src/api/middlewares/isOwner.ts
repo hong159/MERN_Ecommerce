@@ -1,5 +1,5 @@
 import express from "express";
-import { ResCode } from "../enums";
+import { ResCode } from "../shared/enums";
 import { get, merge } from "lodash";
 
 export const isOwner = async (

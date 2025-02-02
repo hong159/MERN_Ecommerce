@@ -1,6 +1,6 @@
 import React from "react";
 
-const InputComponent=({type,label }:{type: string, label: string})=>{
+const InputWithBorder=({type,label }:{type: string, label: string})=>{
     const name = label.toLowerCase().replace(' ', '_');
     const id = label.replace(' ', '_');
     return(
@@ -17,3 +17,5 @@ const InputComponent=({type,label }:{type: string, label: string})=>{
         />
         </div>)
 }
+
+export default InputWithBorder;
